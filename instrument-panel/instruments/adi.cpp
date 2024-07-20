@@ -271,19 +271,19 @@ void adi::addVars()
 
 void adi::addKnobs()
 {
-    // BCM GPIO 2 and 3
-    //calKnob = globals.hardwareKnobs->add(2, 3, -20, 20, 0);
+    // BCM GPIO 12 and 16
+    calKnob = globals.hardwareKnobs->add(12, 16, -20, 20, 0);
 }
 
 void adi::updateKnobs()
 {
     // Read knob for ADI calibration
-    //int val = globals.hardwareKnobs->read(calKnob);
+    int val = globals.hardwareKnobs->read(calKnob);
 
-    //if (val != INT_MIN) {
-        // Convert knob value to variable (adjust for sensitivity)
-        //adiCal = val / 2;
-    //}
+    if (val != INT_MIN) {
+        Convert knob value to variable(adjust for sensitivity)
+            adiCal = val / 2;
+    }
 }
 
 #endif // !_WIN32
