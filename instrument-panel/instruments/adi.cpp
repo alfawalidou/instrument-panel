@@ -281,7 +281,7 @@ void adi::updateKnobs()
     int val = globals.hardwareKnobs->read(calKnob);
 
     if (val != INT_MIN) {
-        Convert knob value to variable(adjust for sensitivity)
+     //   Convert knob value to variable(adjust for sensitivity)
             adiCal = val / 2;
     }
 }
